@@ -28,6 +28,12 @@ class WeatherLocation extends Component {
             data: data,
         };
     }
+    componentDidMount(){
+        this.handleUpdateClick();
+    }
+    componentDidUpdate(prevProps,prevState){
+        
+    }
 
     handleUpdateClick = () => {
         fetch(api_weather).then(resolve => {
